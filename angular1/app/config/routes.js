@@ -1,16 +1,18 @@
-angular.module('primeiraApp').config([
-  '$locationProvider',
-  '$stateProvider',
-  '$urlRouterProvider',
-  function($locationProvider, $stateProvider, $urlRouterProvider) {
-    $locationProvider.hashPrefix('')
-    $stateProvider.state('dashboard', {
-      url: "/dashboard",
-      templateUrl: "dashboard/dashboard.html"
-    }).state('billingCycle', {
-      url: "/billingCycles",
-      templateUrl: "billingCycle/tabs.html"
-    })
+(function() {
+  angular.module('primeiraApp').config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    '$locationProvider',
+    function($stateProvider, $urlRouterProvider, $locationProvider) {
+      $locationProvider.hashPrefix('');
+      $stateProvider.state('dashboard', {
+        url: "/dashboard",
+        templateUrl: "dashboard/dashboard.html"
+      }).state('billingCycle', {
+        url: "/billingCycles?page",
+        templateUrl: "billingCycle/tabs.html"
+      })
 
-    $urlRouterProvider.otherwise('/dashboard')
-}])
+      $urlRouterProvider.otherwise('/dashboard')
+  }])
+})()
