@@ -27,20 +27,23 @@
 //
 //   BillingCycleController()
 // })()
-angular.module('primeiraApp').controller('BillingCycleCtrl', [
-  '$scope',
-  '$http',
-  BillingCycleController
-])
-  function BillingCycleController($scope, $http){
+(function() {
+  angular.module('primeiraApp').controller('BillingCycleCtrl', [
+    '$scope',
+    '$http',
+    'msgs',
+    BillingCycleController,
+  ])
+    function BillingCycleController($scope, $http, msgs){
 
-  $scope.create = function() {
-    const url = `http://localhost:3003/api/billingCycles`;
-    $http.post(url, $scope.billingCycle).then(function(response) {
-      $scope.billingCycle = {}
-      console.log('Operação realizada com sucesso!!')
-    }).catch(function(resp) {
-      console.log(resp.data.errors)
-    })
+    $scope.create = function() {
+      const url = `http://localhost:3003/api/billingCycles`;
+      $http.post(url, $scope.billingCycle).then(function(response) {
+        $scope.billingCycle = {}
+        msgs.addSuccess('Operação realizada com sucesso!!')
+      }).catch(function(resp) {
+        msgs.addError(resp.data.errors)
+      })
+      }
     }
-  }
+})()
