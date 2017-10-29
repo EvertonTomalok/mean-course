@@ -4,7 +4,6 @@
     '$stateProvider',
     '$urlRouterProvider',
     function($locationProvider, $stateProvider, $urlRouterProvider) {
-
       $stateProvider.state('dashboard', {
         url: "/dashboard",
         templateUrl: "dashboard/dashboard.html"
