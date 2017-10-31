@@ -3,8 +3,8 @@
 <section class="content">
   <div class="nav-tabs-custom" ng-controller="BillingCycleCtrl as bcCtrl">
     <ul class="nav nav-tabs">
-      <li ng-if="bcCtrl.tabList">
-        <a href data-target="#tabList" data-toggle="tab">
+      <li ng-if="bcCtrl.tabList" ng-class="{active: bcCtrl.tabList}">
+        <a href data-target="#tabList" data-toggle="tab" >
           <i class="fa fa-bars">Lista</i>
         </a>
       </li>
@@ -13,12 +13,12 @@
           <i class="fa fa-plus">Incluir</i>
         </a>
       </li>
-      <li ng-if="bcCtrl.tabUpdate">
+      <li ng-if="bcCtrl.tabUpdate" ng-class="{active: bcCtrl.tabUpdate}">
         <a href data-target="#tabUpdate" data-toggle="tab">
           <i class="fa fa-pencil">Alterar</i>
         </a>
       </li>
-      <li ng-if="bcCtrl.tabDelete">
+      <li ng-if="bcCtrl.tabDelete" ng-class="{active: bcCtrl.tabDelete}">
         <a href data-target="#tabDelete" data-toggle="tab">
           <i class="fa fa-trash-o">Excluir</i>
         </a>
@@ -28,7 +28,8 @@
       <div class="tab-pane"
           id="tabList"
           ng-include="'billingCycle/list.html'"
-          ng-if="bcCtrl.tabList" ></div>
+          ng-if="bcCtrl.tabList"
+          ng-class="{active: bcCtrl.tabList}" ></div>
       <div class="tab-pane"
           id="tabCreate"
           ng-include="'billingCycle/form.html'"
@@ -36,11 +37,13 @@
       <div class="tab-pane"
           id="tabUpdate"
           ng-include="'billingCycle/form.html'"
-          ng-if="bcCtrl.tabUpdate"></div>
+          ng-if="bcCtrl.tabUpdate"
+          ng-class="{active: bcCtrl.tabUpdate}" ></div>
       <div class="tab-pane"
           id="tabDelete"
           ng-include="'billingCycle/form.html'"
-          ng-if="bcCtrl.tabDelete"></div>
+          ng-if="bcCtrl.tabDelete"
+          ng-class="{active: bcCtrl.tabDelete}" ></div>
     </div>
   </div>
 </section>
