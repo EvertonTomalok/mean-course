@@ -1,0 +1,53 @@
+[33mcommit 2b0e89a1a3c2ad633c41bbce4ee4930a04712732[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Tue Oct 31 21:37:30 2017 -0200
+
+    começando implementar 6 botoes debts and credits
+
+[33mcommit f517d7e047b2bb971b9172da9bb64d6cef1ca5d6[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Tue Oct 31 00:04:52 2017 -0200
+
+    Alterações ng-if lista e incluir
+
+[33mcommit ddb6eeb346e4e252243658068aa20bfb1f283d71[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Mon Oct 30 22:22:09 2017 -0200
+
+    Controller arrumado
+
+[33mcommit cec4d448812dd462c3ab6b461fb9ab305b1385cc[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Sun Oct 29 14:37:51 2017 -0200
+
+    Rotas ok, mas o scope do form não funciona ainda
+
+[33mcommit 431a24e5ce25c32730e5e0e3aa575a03eafa3cea[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Sun Oct 29 01:08:47 2017 -0200
+
+    Arrumado as rotas
+
+[33mcommit 042fdef8b3159e862680e1aee4a3a2c3aad170a4[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Sun Oct 29 00:05:37 2017 -0200
+
+    Continuação do curso, porém tem alguns módulos comentados, porque gerou erro nas rotas
+
+[33mcommit a09780297a2e4b88bc49e606f24330ba1ad7d803[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Sat Oct 28 21:27:03 2017 -0200
+
+    Adicionando cors e implementando dashboard
+
+[33mcommit 99cf7288f34e993f96eeea3d15880c3444cbffc3[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Sat Oct 28 15:29:21 2017 -0200
+
+    Novos Edits
+
+[33mcommit 98d46ac82518467954cfab89052e6b07f0bb4e40[m[33m ([m[1;32mcurso_mean[m[33m)[m
+Author: Everton Tomalok <evertontomalok123@gmail.com>
+Date:   Sat Oct 28 13:56:01 2017 -0200
+
+    curso de men
