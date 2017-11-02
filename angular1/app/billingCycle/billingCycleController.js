@@ -1,20 +1,30 @@
 (function(){
   angular.module('primeiraApp').controller('BillingCycleCtrl', [
       '$http',
+      '$location',
       'msgs',
       'tabs',
       BillingCycleController
   ])
-  function BillingCycleController($http, msgs, tabs) {
+  function BillingCycleController($http, $location, msgs, tabs) {
     const self = this
     const url = `http://localhost:3003/api/billingCycles`
 
     self.refresh = function() {
-      $http.get(url).then(function(response) {
+      const page = parseInt($location.search().page) || 1
+
+      $http.get(`${url}?skip=${(page - 1) * 10}&limit=12`).then(function(response) {
         self.billingCycle = {credits:[{}], debts:[{}]}
         self.billingCycles = response
         self.calculateValues()
         tabs.show(self, { tabList: true, tabCreate: true}) // self sera o owner do método show TabDelete e Update recebem falso por padrao, e nao aparecem no ng-if
+
+        $http.get(`${url}/count`).then(function(response) {
+          self.pages = Math.ceil(response.data.value/12)
+
+        })
+      }).catch(function(resp) {
+        msgs.addError(resp.data.errors)
       })
     }
 
