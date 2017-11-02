@@ -17,15 +17,16 @@
         self.billingCycle = {credits:[{}], debts:[{}]}
         self.billingCycles = response
         self.calculateValues()
-        tabs.show(self, { tabList: true, tabCreate: true}) // self sera o owner do método show TabDelete e Update recebem falso por padrao, e nao aparecem no ng-if
 
         $http.get(`${url}/count`).then(function(response) {
           self.pages = Math.ceil(response.data.value/12)
+          tabs.show(self, { tabList: true, tabCreate: true}) // self sera o owner do método show TabDelete e Update recebem falso por padrao, e nao aparecem no ng-if
 
         })
       }).catch(function(resp) {
         msgs.addError(resp.data.errors)
       })
+
     }
 
     self.create = function() {
